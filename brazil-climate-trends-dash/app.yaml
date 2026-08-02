@@ -1,0 +1,11 @@
+command: ['streamlit', 'run', 'app.py']
+
+env:
+  - name: DBX_SQL_WAREHOUSE
+    valueFrom: sql-warehouse
+  - name: REGIONS_TABLE
+    valueFrom: regions
+  - name: REGION_MANAGERS_TABLE
+    valueFrom: region_managers
+  - name: REGION_TYPES_TABLE
+    valueFrom: region_types
