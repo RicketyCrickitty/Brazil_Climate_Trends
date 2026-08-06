@@ -1,4 +1,4 @@
-command: ['streamlit', 'run', 'app.py']
+command: ['streamlit', 'run', 'Dashboard_Main.py']
 
 env:
   - name: DBX_SQL_WAREHOUSE
@@ -9,3 +9,9 @@ env:
     valueFrom: region_managers
   - name: REGION_TYPES_TABLE
     valueFrom: region_types
+  - name: LAND_USE_TYPES_TABLE
+    valueFrom: land_use_types
+  - name: LAND_USAGE_TABLE
+    valueFrom: land_usage
+  - name: CLIMATE_MARKERS_TABLE
+    valueFrom: climate_markers
