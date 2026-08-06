@@ -76,6 +76,12 @@ with st.container(border=True):
 
         if cm_submit:
             st.write('Inserting data...')
+            df = {
+                    'region_id': int(region_id),
+                    'year': int(year),
+                    'co2_emission': float(co2),
+                    'deforestation': float(deforest),
+            }
             data_utils.insert_climate_marker(st.session_state['sql_connection'], df)
             st.rerun()
 

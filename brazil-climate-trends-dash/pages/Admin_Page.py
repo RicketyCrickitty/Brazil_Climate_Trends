@@ -26,9 +26,9 @@ with st.container(border=True):
 
 with st.form('Manager Update Form'):
     st.markdown('**Update Managers Here**')
-    regions = get_region_list(st.session_state['sql_connection'])
+    regions = data_utils.get_region_list(st.session_state['sql_connection'])
     region_name = st.selectbox('region_select', regions)
-    region_id = get_region_id_from_name(st.session_state['sql_connection'], region_name)
+    region_id = data_utils.get_region_id_from_name(st.session_state['sql_connection'], region_name)
     m_first_name = st.text_input('manager_first_name')
     m_last_name = st.text_input('manager_last_name')
     m_submit = st.form_submit_button("Update Region Manager")
